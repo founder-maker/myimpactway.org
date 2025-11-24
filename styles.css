@@ -223,3 +223,65 @@ footer {
     font-weight: bold;
     border-top: 2px solid #0a4f8f;
 }
+/* ======================================= */
+/* NEW HOME PAGE PROGRAM HIGHLIGHTS */
+/* ======================================= */
+#program-highlights {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#program-highlights h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #0a4f8f;
+}
+
+.program-summary {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.program-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 450px;
+    text-align: left;
+}
+
+.program-card h4 {
+    color: #ff9900;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.program-quick-stats {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.program-card .cta-button {
+    margin-top: 15px;
+}
+
+.view-all-link {
+    margin-top: 40px;
+    font-size: 1.1em;
+}
+
+/* Ensure mobile layout stacks the cards */
+@media (max-width: 768px) {
+    .program-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+}
