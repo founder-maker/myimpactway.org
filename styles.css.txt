@@ -1,0 +1,140 @@
+/* GLOBAL CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* GLOBAL STYLES (Applies to the whole site) */
+body {
+    font-family: Arial, sans-serif; /* Readable font */
+    line-height: 1.6; /* Comfortable spacing for text */
+    background-color: #f7f7f7; /* Very light gray background */
+    color: #333; /* Dark gray text for readability */
+}
+
+/* Utility to keep content centered and readable on large screens */
+header, main, footer {
+    max-width: 1100px; /* Max width of the content area */
+    margin-left: auto; /* Centers the block horizontally */
+    margin-right: auto;
+    padding: 0 20px; /* Space on the left and right edges */
+}
+
+/* Basic Link Styling */
+a {
+    color: #007bff; /* A standard blue color for links */
+    text-decoration: none; /* Removes underline by default */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline when hovering over a link */
+}
+
+/* Remove the <hr> lines you previously used in HTML */
+hr {
+    display: none; 
+}
+/* HEADER AND NAVIGATION (Layout using Flexbox) */
+header {
+    display: flex; /* Activate Flexbox */
+    justify-content: space-between; /* Pushes content (h1 and nav) to opposite ends */
+    align-items: center; /* Vertically centers the items */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: #0a4f8f; /* Primary brand color */
+}
+
+header p {
+    /* Hide the subtitle on the desktop to clean up the look */
+    display: none; 
+}
+
+nav a {
+    margin-left: 20px; /* Spacing between navigation links */
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s; /* Smooth color change on hover */
+}
+
+nav a:hover {
+    color: #007bff;
+}
+/* HERO SECTION (index.html) */
+#hero {
+    background-color: #0a4f8f; /* A deep blue background */
+    color: white; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 10px; /* Small space below the header */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+#hero h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#hero a {
+    display: inline-block;
+    background-color: #ff9900; /* Bright orange/yellow button */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#hero a:hover {
+    background-color: #e58800; /* Darker orange on hover */
+    text-decoration: none;
+}
+/* FOOTER */
+footer {
+    padding: 20px 20px;
+    text-align: center;
+    background-color: #222; /* Dark background */
+    color: #ccc;
+    margin-top: 40px; /* Space above the footer */
+    font-size: 0.9em;
+}
+/* ======================================= */
+/* MEDIA QUERY (Makes the site Mobile-Friendly) */
+/* ======================================= */
+@media (max-width: 700px) {
+    /* 1. Header: Stack the Logo and Navigation */
+    header {
+        flex-direction: column; /* Stacks items vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px; /* Add space between logo and links */
+    }
+
+    nav a {
+        /* Reduce spacing between links on mobile */
+        margin: 0 10px; 
+    }
+
+    /* 2. Hero: Adjust font size for smaller screens */
+    #hero {
+        padding: 40px 10px;
+    }
+    
+    #hero h2 {
+        font-size: 1.5em; /* Smaller, more readable title */
+    }
+}
