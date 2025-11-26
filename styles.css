@@ -1,177 +1,244 @@
-/* --- IMPACTWAY CHILDREN'S INITIATIVE: MODERN, HIGH-TRUST AESTHETIC --- */
+/* --------------------------------------------------------------------------
+   BRAND COLORS (Consistent with ImpactWay's identity)
+   -------------------------------------------------------------------------- */
+:root {
+    --color-primary-green: #1D4733; /* Grounding Green */
+    --color-secondary-blue: #38A3A5; /* Tranquil Blue (Used sparingly for contrast) */
+    --color-accent-gold: #FFC300; /* Sunset Gold */
+    --color-neutral-clay: #F0EAD6; /* Earthy Clay */
+    --color-dark-text: #2c3e50; /* Dark text for readability */
+    --color-light-bg: #FAF3E0; /* Light background for sections */
+}
 
-/* 1. Base & Typography */
+/* --------------------------------------------------------------------------
+   BASE STYLES & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
 body {
-    font-family: 'Lato', 'Open Sans', sans-serif; 
-    color: #333;
-    line-height: 1.7; 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-dark-text);
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF; /* High contrast clean white background */
+    background-color: white;
+}
+
+main {
+    padding-top: 80px; /* Offset for fixed header */
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    color: #0B5345; /* Deep Forest Green for headings */
-    font-weight: 800; /* Extra bold, institutional feel */
+    font-family: Georgia, serif; /* Using serif for headings for a sophisticated feel */
+    color: var(--color-primary-green);
+    margin-top: 0;
 }
 
-.lead-text {
-    font-size: 1.35em; 
-    color: #444;
-}
+h1 { font-size: 2.5em; color: var(--color-accent-gold); }
+h2 { font-size: 2em; margin-bottom: 30px; text-align: center; }
+h4 { font-size: 1.25em; margin-bottom: 10px; }
 
-/* 2. Global Layout & Spacing (Full-Bleed Design) */
-main {
-    padding: 0; /* Allows sections to stretch full width */
+p.lead-text {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: var(--color-dark-text);
 }
 
 section {
-    padding: 80px 5%; /* Generous vertical padding */
-    margin: 0;
+    padding: 80px 5%;
 }
 
-/* 3. Header & Navigation (Sticky and Professional) */
+/* --------------------------------------------------------------------------
+   HEADER & NAVIGATION (APPLIED TO ALL PAGES)
+   -------------------------------------------------------------------------- */
 header {
-    background-color: #0B5345;
-    color: white;
-    padding: 20px 5%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-/* 4. CTA Buttons (Trust Blue) */
-.cta-button, .donate-button {
-    background-color: #3498DB; 
-    color: white;
-    padding: 15px 30px; 
-    border-radius: 5px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 1.05em;
-    border: none;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover, .donate-button:hover {
-    background-color: #2980b9; 
-}
-
-/* 5. Hero Section (High Visual Impact) */
-#hero {
-    min-height: 550px; 
-    padding: 100px 5%;
-    color: white;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-#hero::before { /* Dark Overlay for professional readability */
-    content: '';
-    position: absolute;
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.45); 
-    z-index: -1;
+    z-index: 1000;
 }
 
-#hero h2 {
-    color: white;
-    font-size: 3.2em;
-    max-width: 800px;
+#logo img {
+    height: 40px;
 }
 
-/* 6. Program Cards & Layout (Modern Grid) */
+nav a {
+    text-decoration: none;
+    color: var(--color-primary-green);
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-accent-gold);
+}
+
+.cta-button {
+    background-color: var(--color-primary-green);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-secondary-blue);
+}
+
+/* --------------------------------------------------------------------------
+   SHARED CONTENT LAYOUTS (Used across multiple pages)
+   -------------------------------------------------------------------------- */
+
+/* Standard Card/Summary Layout (for Dual-Model, Programs, etc.) */
 .program-summary {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .program-card {
-    background-color: #F9F9F9; 
+    flex: 1;
+    min-width: 300px; /* Ensures cards are readable */
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Soft, premium shadow */
-    position: relative;
-    overflow: hidden;
-    transition: box-shadow 0.3s;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Visual accent to enhance the card design */
-.program-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Specific styling for the dual-model cards on about-us.html */
+.dual-model-card.nonprofit {
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+.dual-model-card.llc {
+    box-shadow: 0 4px 15px rgba(11, 83, 69, 0.2);
+}
+
+.dual-model-card.nonprofit h4 {
+    color: #3498DB; /* Blue for Nonprofit focus */
+}
+
+.dual-model-card.llc h4 {
+    color: var(--color-primary-green); /* Green for Platform/Profit focus */
+}
+
+.dual-model-card ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+/* --------------------------------------------------------------------------
+   ABOUT US PAGE SPECIFIC STYLES
+   -------------------------------------------------------------------------- */
+
+/* Hero Banner */
+.hero-banner {
+    background-color: var(--color-neutral-clay);
+    padding: 60px 5%;
+    text-align: center;
+}
+
+/* Manifesto Styling */
+.manifesto {
+    margin-top: 40px;
+    border-left: 5px solid var(--color-secondary-blue);
+    padding-left: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.manifesto h3 {
+    color: var(--color-secondary-blue);
+}
+
+/* Founder Section */
+.founder-section {
+    background-color: #F8F8F8;
+}
+
+.founder-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.founder-image-container {
+    flex: 1;
+    min-width: 250px;
+}
+
+.founder-image-container img {
     width: 100%;
-    height: 6px;
-    background-color: #B87333; /* Earthy Clay accent */
+    border-radius: 50%;
+    object-fit: cover;
+    height: 250px;
 }
 
-.program-card:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+.founder-text {
+    flex: 2;
 }
 
-/* 7. Trust Bar Section (Compliance Credibility) */
-#trust-bar {
-    background-color: #F0F0F0;
-    padding: 25px 5%;
-    text-align: center;
-    border-bottom: 3px solid #E0E0E0;
-}
 
-#trust-bar h4 {
-    color: #777;
-    margin-bottom: 15px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
-/* 8. Emotional Content Section (Contrast Background) */
-.emotional-section {
-    background-color: #FAF3E0; /* Warm Cream for a soft, inviting background */
-    padding: 80px 5%;
-    text-align: center;
-}
-
-.emotional-section h3 {
-    color: #B87333; /* Earthy Clay for warmth */
-    font-size: 2em;
-}
-
-/* 9. Footer */
+/* --------------------------------------------------------------------------
+   FOOTER
+   -------------------------------------------------------------------------- */
 footer {
-    background-color: #0B5345;
-    color: #FAF3E0;
     text-align: center;
-    padding: 30px 5%;
+    padding: 20px;
+    background-color: var(--color-primary-green);
+    color: white;
+    font-size: 0.85em;
 }
 
-/* Media Queries */
+/* --------------------------------------------------------------------------
+   RESPONSIVENESS (Mobile Optimization)
+   -------------------------------------------------------------------------- */
+
 @media (max-width: 768px) {
-    #hero h2 {
-        font-size: 2.5em;
+    header {
+        flex-direction: column;
+        padding-top: 5px;
+        padding-bottom: 10px;
     }
+    
+    nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 5px 8px;
+    }
+
     .program-summary {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .founder-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .founder-image-container {
+        min-width: 150px;
+        max-width: 200px;
+        order: -1; /* Move image to the top on mobile */
     }
 }
