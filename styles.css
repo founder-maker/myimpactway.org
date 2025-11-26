@@ -1,192 +1,165 @@
-/* --- BRAND IDENTITY GUIDE IMPLEMENTATION --- */
+/* --- IMPACTWAY CHILDREN'S INITIATIVE: MODERN AESTHETIC --- */
 
-/* 1. Typography */
+/* 1. Base & Typography */
 body {
-    font-family: 'Lato', 'Open Sans', sans-serif; /* High legibility */
-    color: #333; /* Dark text for high contrast */
-    line-height: 1.6;
+    font-family: 'Lato', 'Open Sans', sans-serif; 
+    color: #333;
+    line-height: 1.7; /* Increased line-height for readability (UX) */
     margin: 0;
     padding: 0;
-    background-color: #FAF3E0; /* Warm Cream background */
+    background-color: #FFFFFF; /* High contrast clean white background */
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif; /* Strong Sans-Serif for headlines */
-    color: #0B5345; /* Deep Forest Green for headings */
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #0B5345; /* Deep Forest Green */
+    font-weight: 800; /* Extra bold for institutional feel */
 }
 
-/* 2. Color Palette & CTAs */
-.cta-button, .donate-button {
-    background-color: #3498DB; /* Trust Blue */
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.2s;
-    border: none;
+.lead-text {
+    font-size: 1.35em; /* Larger lead text */
+    color: #444;
 }
 
-.cta-button:hover, .donate-button:hover {
-    background-color: #2980b9; 
-    transform: translateY(-2px);
+/* 2. Global Layout & Spacing */
+main {
+    padding: 0; /* Allows full-width sections */
 }
 
-/* 3. Header & Navigation (Professional Look) */
+section {
+    padding: 80px 5%; /* More vertical padding */
+    margin: 0;
+    border-bottom: none; /* Removed subtle separator for clean look */
+}
+
+/* 3. Header & Navigation (Sticky and High Contrast) */
 header {
-    background-color: #0B5345; /* Deep Forest Green */
+    background-color: #0B5345;
     color: white;
-    padding: 15px 5%;
+    padding: 20px 5%; /* More padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky; /* Sticky Nav for UX */
+    position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
-/* 4. Layout & Spacing (White Space Principle) */
-main {
-    padding: 40px 5%;
-}
-
-section {
-    padding: 60px 0;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #E0E0E0; /* Subtle separator */
-}
-
-.lead-text {
-    font-size: 1.25em;
-    color: #444;
-}
-
-/* --- UX & COMPONENT DESIGN --- */
-
-/* Hero Section */
-#hero {
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+/* 4. CTA Buttons (Trust Blue) */
+.cta-button, .donate-button {
+    background-color: #3498DB; 
     color: white;
-    background: url('images/hero-landscape.jpg') center/cover no-repeat; /* Placeholder for a landscape photo */
-    position: relative;
-    z-index: 1;
-    padding: 80px 5%;
+    padding: 15px 30px; /* Larger buttons */
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1.05em;
+    border: none;
 }
 
-#hero::before { /* Dark Overlay for Readability */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.45); 
-    z-index: -1;
+.cta-button:hover, .donate-button:hover {
+    background-color: #2980b9; 
+    transform: none; /* Removed translateY for cleaner UI */
+}
+
+/* 5. Hero Section (Full-Bleed, High Visual Impact) */
+#hero {
+    min-height: 550px; /* Taller hero */
+    padding: 100px 5%;
+    color: white;
+    background-color: #000; /* Fallback */
 }
 
 #hero h2 {
     color: white;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 3.2em;
+    max-width: 800px;
 }
 
-/* Program Cards (Impact Triad) */
-#program-highlights .program-summary {
-    display: flex;
+/* 6. Program Cards & Layout (Use Flex/Grid for Modern Look) */
+.program-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .program-card {
-    flex: 1;
-    background-color: white;
-    padding: 25px;
+    background-color: #F9F9F9; /* Very light grey */
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow for premium feel */
-    transition: box-shadow 0.3s, transform 0.3s;
-    border-top: 5px solid #3498DB; /* Trust Blue separator */
-}
-
-.program-card:hover {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    transform: translateY(-5px); /* Micro-interaction: Lift on hover */
-}
-
-/* Donor/Cost Tables */
-.cost-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: white;
-    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    border-top: 0; /* Removed solid top border */
+    position: relative;
     overflow: hidden;
 }
 
-.cost-table th, .cost-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #E0E0E0;
+/* Visual element to replace the top border for modern look */
+.program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #B87333; /* Earthy Clay separator */
 }
 
-.cost-table th {
-    background-color: #B87333; /* Earthy Clay */
-    color: white;
+.program-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.cost-table tfoot td {
-    background-color: #F0F0F0;
-    font-weight: bold;
-}
-
-/* Safeguarding/Compliance Block (High Contrast) */
-.safeguarding-block {
-    background-color: #FFE6E6; /* Light Red/Warning color for attention */
-    border: 3px solid #CC0000;
-    padding: 25px;
-    margin-top: 30px;
-    border-radius: 10px;
-}
-
-.safeguarding-block h4 {
-    color: #CC0000;
-    margin-top: 0;
-}
-
-/* Footer (Deep Forest Green) */
+/* 7. Footer */
 footer {
     background-color: #0B5345;
     color: #FAF3E0;
     text-align: center;
-    padding: 20px 5%;
+    padding: 30px 5%;
 }
 
-/* --- Media Queries for Mobile UX --- */
+/* 8. Trust Bar Section (Visual Credibility) */
+#trust-bar {
+    background-color: #F0F0F0;
+    padding: 25px 5%;
+    text-align: center;
+    border-bottom: 3px solid #E0E0E0;
+}
+
+#trust-bar h4 {
+    color: #777;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* 9. Emotional Content Section (New component for high-impact content) */
+.emotional-section {
+    background-color: #FAF3E0; /* Warm Cream for softness */
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.emotional-section h3 {
+    color: #B87333; /* Earthy Clay for warmth */
+    font-size: 2em;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    #program-highlights .program-summary {
-        flex-direction: column;
+    #hero h2 {
+        font-size: 2.5em;
     }
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-    header nav {
-        margin-top: 10px;
-    }
-    header nav a {
-        margin: 0 5px;
-        display: block;
+    .program-summary {
+        grid-template-columns: 1fr;
     }
 }
