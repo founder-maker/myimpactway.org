@@ -1,10 +1,10 @@
-/* --- IMPACTWAY CHILDREN'S INITIATIVE: MODERN AESTHETIC --- */
+/* --- IMPACTWAY CHILDREN'S INITIATIVE: MODERN, HIGH-TRUST AESTHETIC --- */
 
 /* 1. Base & Typography */
 body {
     font-family: 'Lato', 'Open Sans', sans-serif; 
     color: #333;
-    line-height: 1.7; /* Increased line-height for readability (UX) */
+    line-height: 1.7; 
     margin: 0;
     padding: 0;
     background-color: #FFFFFF; /* High contrast clean white background */
@@ -12,38 +12,37 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-    color: #0B5345; /* Deep Forest Green */
-    font-weight: 800; /* Extra bold for institutional feel */
+    color: #0B5345; /* Deep Forest Green for headings */
+    font-weight: 800; /* Extra bold, institutional feel */
 }
 
 .lead-text {
-    font-size: 1.35em; /* Larger lead text */
+    font-size: 1.35em; 
     color: #444;
 }
 
-/* 2. Global Layout & Spacing */
+/* 2. Global Layout & Spacing (Full-Bleed Design) */
 main {
-    padding: 0; /* Allows full-width sections */
+    padding: 0; /* Allows sections to stretch full width */
 }
 
 section {
-    padding: 80px 5%; /* More vertical padding */
+    padding: 80px 5%; /* Generous vertical padding */
     margin: 0;
-    border-bottom: none; /* Removed subtle separator for clean look */
 }
 
-/* 3. Header & Navigation (Sticky and High Contrast) */
+/* 3. Header & Navigation (Sticky and Professional) */
 header {
     background-color: #0B5345;
     color: white;
-    padding: 20px 5%; /* More padding */
+    padding: 20px 5%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 header a {
@@ -58,25 +57,38 @@ header a {
 .cta-button, .donate-button {
     background-color: #3498DB; 
     color: white;
-    padding: 15px 30px; /* Larger buttons */
+    padding: 15px 30px; 
     border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-size: 1.05em;
     border: none;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover, .donate-button:hover {
     background-color: #2980b9; 
-    transform: none; /* Removed translateY for cleaner UI */
 }
 
-/* 5. Hero Section (Full-Bleed, High Visual Impact) */
+/* 5. Hero Section (High Visual Impact) */
 #hero {
-    min-height: 550px; /* Taller hero */
+    min-height: 550px; 
     padding: 100px 5%;
     color: white;
-    background-color: #000; /* Fallback */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#hero::before { /* Dark Overlay for professional readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45); 
+    z-index: -1;
 }
 
 #hero h2 {
@@ -85,7 +97,7 @@ header a {
     max-width: 800px;
 }
 
-/* 6. Program Cards & Layout (Use Flex/Grid for Modern Look) */
+/* 6. Program Cards & Layout (Modern Grid) */
 .program-summary {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -94,16 +106,16 @@ header a {
 }
 
 .program-card {
-    background-color: #F9F9F9; /* Very light grey */
+    background-color: #F9F9F9; 
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Softer shadow */
-    border-top: 0; /* Removed solid top border */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Soft, premium shadow */
     position: relative;
     overflow: hidden;
+    transition: box-shadow 0.3s;
 }
 
-/* Visual element to replace the top border for modern look */
+/* Visual accent to enhance the card design */
 .program-card::before {
     content: '';
     position: absolute;
@@ -111,22 +123,14 @@ header a {
     left: 0;
     width: 100%;
     height: 6px;
-    background-color: #B87333; /* Earthy Clay separator */
+    background-color: #B87333; /* Earthy Clay accent */
 }
 
 .program-card:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* 7. Footer */
-footer {
-    background-color: #0B5345;
-    color: #FAF3E0;
-    text-align: center;
-    padding: 30px 5%;
-}
-
-/* 8. Trust Bar Section (Visual Credibility) */
+/* 7. Trust Bar Section (Compliance Credibility) */
 #trust-bar {
     background-color: #F0F0F0;
     padding: 25px 5%;
@@ -142,9 +146,9 @@ footer {
     font-size: 0.9em;
 }
 
-/* 9. Emotional Content Section (New component for high-impact content) */
+/* 8. Emotional Content Section (Contrast Background) */
 .emotional-section {
-    background-color: #FAF3E0; /* Warm Cream for softness */
+    background-color: #FAF3E0; /* Warm Cream for a soft, inviting background */
     padding: 80px 5%;
     text-align: center;
 }
@@ -152,6 +156,14 @@ footer {
 .emotional-section h3 {
     color: #B87333; /* Earthy Clay for warmth */
     font-size: 2em;
+}
+
+/* 9. Footer */
+footer {
+    background-color: #0B5345;
+    color: #FAF3E0;
+    text-align: center;
+    padding: 30px 5%;
 }
 
 /* Media Queries */
